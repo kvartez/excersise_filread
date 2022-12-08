@@ -13,29 +13,15 @@ int main()
         if (wejscie.good()) {
         	wyjscie<<"[  \n  ";
             while (!wejscie.eof()) {
-            	
-            
             		getline(wejscie, line);
-					wyjscie << "\n { \n \"imie\" : \" " << line<<"\"";
-					
-					getline(wejscie, line);
-						wyjscie << "  \n\"nazwisko\" : \" " << line<<"\"";
-					
-					getline(wejscie, line);
-						wyjscie << "  \n\"id\" : \" " << line << "\"\n},";
-						
-				
-            		
-				
-				
-				
-				
-				
-				
+			wyjscie << "\n { \n \"imie\" : \" " << line<<"\"";
+			getline(wejscie, line);
+			wyjscie << "  \n\"nazwisko\" : \" " << line<<"\"";
+			getline(wejscie, line);
+			wyjscie << "  \n\"id\" : \" " << line << "\"\n},";
             }
             wyjscie<<"\n]";
         }
-       
         wejscie.close();
         wyjscie.close();
     	system("PAUSE");
